@@ -1,0 +1,16 @@
+[book]
+title = "MSP Handbook"
+authors = ["Tony Thanh"]
+language = "en"
+src = "."
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+default-theme = "rust"
+preferred-dark-theme = "rust"
+git-repository-url = "https://github.com/mercurybridge/msp-handbook"
+git-repository-icon = "fa-github"
+copy-font = true
