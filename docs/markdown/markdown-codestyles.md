@@ -36,7 +36,7 @@ You can indicate emphasis with bold, italic, strikethrough, subscript, or supers
 | Strikethrough          | `~~ ~~` or `~ ~`      | `~~This was mistaken text~~`             | ~~This was mistaken text~~                |
 | Bold and nested italic | `** **` and `_ _`     | `**This text is _extremely_ important**` | **This text is _extremely_ important**    |
 | All bold and italic    | `*** ***`             | `***All this text is important***`       | ***All this text is important***          | 
-| Inline code            | `` ` ` `` (single `)  | `` `systemctl status nginx` ``           | `systemctl status nginx`                      |
+| Inline code            | `` ` ` `` (single `)  | `` `systemctl status nginx` ``           | `systemctl status nginx`                  |
 | Subscript              | `<sub> </sub>`        | `This is a <sub>subscript</sub> text`    | This is a <sub>subscript</sub> text       |
 | Superscript            | `<sup> </sup>`        | `This is a <sup>superscript</sup> text`  | This is a <sup>superscript</sup> text     |
 | Underline              | `<ins> </ins>`        | `This is an <ins>underlined</ins> text`  | This is an <ins>underlined</ins> text     |
@@ -45,16 +45,6 @@ You can indicate emphasis with bold, italic, strikethrough, subscript, or supers
 To format code or text into its own distinct block, use triple backticks.
 Use triple backticks to format commands or config as a standalone block.  
 You can add a language hint for syntax highlighting (e.g., `bash`, `yaml`).
-
-**Linux example:**
-
-```bash
-# Update packages (Debian/Ubuntu)
-sudo apt update && sudo apt upgrade -y
-
-# Check disk usage
-df -h
-```
 
 **Ansible playbook example:**
 
@@ -70,6 +60,16 @@ df -h
     name: nginx
     state: started
     enabled: true
+```
+
+**Linux example:**
+
+```shell
+# Update packages (Debian/Ubuntu)
+sudo apt update && sudo apt upgrade -y
+
+# Check disk usage
+df -h
 ```
 
 **Ansible ad-hoc and playbook commands:**
@@ -95,3 +95,4 @@ Text that is not a quote
 Quoted text is indented with a vertical line on the left and displayed using gray type.
 
 ![Markdown showing the difference between normal and quoted text.](../picture/quoted-text-rendered.png)
+
