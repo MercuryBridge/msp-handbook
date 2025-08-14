@@ -1,6 +1,6 @@
-# Introduction
+# Introduction 
 
-## What is Markdown?
+## Markdown basic writing and formatting syntax
 
 Markdown is a plain text format for writing structured documents, based on conventions for indicating formatting in email and usenet posts. It was developed by John Gruber (with help from Aaron Swartz) and released in 2004. In the next decade, dozens of implementations were developed in many languages. 
 
@@ -8,9 +8,7 @@ Markdown is an easy-to-read, easy-to-write language for formatting plain text. W
 
 In this guide, you'll learn some basic/advanced formatting features by creating or editing a markdown file.
 
-## Basic writing and formatting syntax
-
-### Headings
+## Headings
 To create a heading, add one to six <kbd>#</kbd> symbols before your heading text. The number of <kbd>#</kbd> you use will determine the hierarchy level and typeface size of the heading.
 
 ```markdown
@@ -21,9 +19,39 @@ To create a heading, add one to six <kbd>#</kbd> symbols before your heading tex
 
 ![Markdown showing sample h1, h2, and h3 headers, which descend in type size and visual weight to show hierarchy level.](../picture/headings-rendered.png)
 
+## Creating a table
+You can create tables with pipes `|` and hyphens `-`. Hyphens are used to create each column's header, while pipes separate each column. You must include a blank line before your table in order for it to correctly render.
+
+```markdown
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+```
+
+![Markdown table rendered as two equal columns. Headers are shown in boldface, and alternate content rows have gray shading.](../picture/table-basic-rendered.png)
+
+The pipes on either end of the table are optional.
+
+Cells can vary in width and do not need to be perfectly aligned within columns. There must be at least three hyphens in each column of the header row. 
+
+Markdown table with the commands formatted as code blocks. Bold and italic formatting are used in the descriptions
+
+You can align text to the left, right, or center of a column by including colons `:` to the left, right, or on both sides of the hyphens within the header row.
+
+
+```markdown
+| Left-aligned | Center-aligned | Right-aligned |
+| :--- |            :-:      |                 -----: |
+| `ls -l`   | ***ls -l***    | _ls -l_    |
+| ls -a     | ~~ls -a~~        | **ls -a**       |
+```
+
+![Markdown table rendered with cells can vary in width and do not need to be perfectly aligned within columns. .](../picture/table-basic-rendered-1.png)
+
 ## Styling text
 You can indicate emphasis with bold, italic, strikethrough, subscript, or superscript text in comment fields and `.md` files.
-
 
 | Style                  | Syntax                | Example                                  | Output                                    |
 | ---------------------- | --------------------- | ---------------------------------------- | ----------------------------------------- |
@@ -197,3 +225,56 @@ You can display an image from your repository, add a link to an online image, or
 
 > [!NOTE]
 > When you want to display an image that is in your repository, use relative links instead of absolute links.
+
+## Creating a collapsed section
+
+You can temporarily obscure sections of your Markdown by creating a collapsed section that the reader can choose to expand. 
+
+The Markdown inside the `<summary>` label will be collapsed by default and after a reader `Click` , the details are expanded:
+
+<details>
+  <summary>Click</summary>
+
+  ### Heading
+  1. Foo
+  2. Bar
+     * Foo
+     * Bar
+
+  ### Some Ansible Task
+  ```yaml
+- name: Ensure Nginx is installed
+    apt:
+    name: nginx
+    state: present
+    update_cache: true
+  ```
+</details>
+
+---
+
+For example : The collapsed section contains headers, text, and code blocks.
+
+````markdown
+<details>
+  <summary>Click me</summary>
+
+  ### Heading
+  1. Foo
+  2. Bar
+     * Foo
+     * Bar
+
+  ### Some Ansible Task
+  ```yaml
+- name: Ensure Nginx is installed
+    apt:
+    name: nginx
+    state: present
+    update_cache: true
+  ```
+</details>
+````
+
+
+
