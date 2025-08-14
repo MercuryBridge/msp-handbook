@@ -1,7 +1,7 @@
 # Documentation Guideline
 
 ## Network Diagram
-- Drawing with draw.io.
+- Drawing with `https://www.drawio.com/`.
 - Use icons from https://clarity.design/documentation/icons/shapes.
   - Otherwise, use the text in a frame.
 - Use text + horizontal ellipses for networks such as the Internet and WAN.
