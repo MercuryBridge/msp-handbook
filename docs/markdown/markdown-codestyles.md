@@ -275,6 +275,3 @@ For example : The collapsed section contains headers, text, and code blocks.
   ```
 </details>
 ````
-
-
-
