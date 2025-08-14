@@ -70,6 +70,7 @@ You can add a language hint for syntax highlighting (e.g.,`shell`, `bash`, `yaml
 
 **Ansible playbook example:**
 
+````markdown
 ```yaml
 - name: Ensure Nginx is installed
     apt:
@@ -83,8 +84,35 @@ You can add a language hint for syntax highlighting (e.g.,`shell`, `bash`, `yaml
     state: started
     enabled: true
 ```
+````
 
 **Linux example:**
+
+````markdown
+```shell
+# Update packages (Debian/Ubuntu)
+sudo apt update && sudo apt upgrade -y
+
+# Check disk usage
+df -h
+```
+````
+
+Here are the rendered : 
+
+```yaml
+- name: Ensure Nginx is installed
+    apt:
+    name: nginx
+    state: present
+    update_cache: true
+
+- name: Ensure Nginx is enabled and running
+    service:
+    name: nginx
+    state: started
+    enabled: true
+```
 
 ```shell
 # Update packages (Debian/Ubuntu)
