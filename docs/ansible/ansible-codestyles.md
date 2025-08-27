@@ -15,21 +15,21 @@
         default('https://vault.example.com:8200') | 
         urlsplit('hostname')
       }}
-    # -> "gsvlt1401-dev.grp-dev.p2.iijgio.jp"
+    # -> "vault-alphanetworks.global"
 
     very_long_line_with_space: >-
       abcdefghijklmnopqrstuvwxyz
       abcdefghijklmnopqrstuvwxyz
       abcdefghijklmnopqrstuvwxyz
       {{ vault_hostname }}
-    # -> "abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz gsvlt1401-dev.grp-dev.p2.iijgio.jp"
+    # -> "abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz vault-alphanetworks.global"
 
     very_long_word_without_space: "\
       abcdefghijklmnopqrstuvwxyz\
       abcdefghijklmnopqrstuvwxyz\
       abcdefghijklmnopqrstuvwxyz\
       {{ vault_hostname }}"
-    # -> "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzgsvlt1401-dev.grp-dev.p2.iijgio.jp"
+    # -> "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzvault-alphanetworks.global"
 
     multiline_text: |-
       abcdefghijklmnopqrstuvwxyz
@@ -109,4 +109,5 @@
           required: true
           description: "Sample argument C"
   ```
+
 
