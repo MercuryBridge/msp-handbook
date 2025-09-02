@@ -36,4 +36,19 @@ Standards for creating and maintaining visual diagrams in documentation.
 
 - Renders the following diagram:
 
+  ```mermaid
+  ---
+  config:
+    look: handDrawn
+    theme: forest
+  ---
+  flowchart LR
+      A[Step A] -->|Variable A| B(Step B)
+      B --> C{Decision}
+      C -->|Variable B| D[Result One]
+      C -->|Variable C| E[Result Two]
+  ```
+
+- Or alternatively, view the static image:
+
 ![Sample Mermaid Diagram](../picture/sample.mermaid.png)
