@@ -10,7 +10,7 @@ Standards for creating and maintaining visual diagrams in documentation.
 - Save in editable formats (`.drawio.png`, `.drawio.svg`) for future modifications
 - Example diagram embedded in Markdown:
 
-![Sample Diagram](../picture/sample.drawio.svg)
+![Sample Drawio Diagram](../picture/sample.drawio.svg)
 
 ## Mermaid Guidelines
 
@@ -36,15 +36,4 @@ Standards for creating and maintaining visual diagrams in documentation.
 
 - Renders the following diagram:
 
-  ```mermaid
-  ---
-  config:
-    look: handDrawn
-    theme: forest
-  ---
-  flowchart LR
-      A[Step A] -->|Variable A| B(Step B)
-      B --> C{Decision}
-      C -->|Variable B| D[Result One]
-      C -->|Variable C| E[Result Two]
-  ```
+![Sample Mermaid Diagram](../picture/sample.mermaid.png)
