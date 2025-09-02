@@ -22,6 +22,11 @@ Standards for creating and maintaining visual diagrams in documentation.
 - Example Markdown syntax:
 
   ```markdown
+  ---
+  config:
+    look: handDrawn
+    theme: forest
+  ---
   flowchart LR
       A[Step A] -->|Variable A| B(Step B)
       B --> C{Decision}
@@ -32,6 +37,11 @@ Standards for creating and maintaining visual diagrams in documentation.
 - Renders the following diagram:
 
   ```mermaid
+  ---
+  config:
+    look: handDrawn
+    theme: forest
+  ---
   flowchart LR
       A[Step A] -->|Variable A| B(Step B)
       B --> C{Decision}
